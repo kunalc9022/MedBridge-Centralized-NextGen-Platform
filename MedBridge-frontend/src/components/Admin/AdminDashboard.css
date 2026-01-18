@@ -1,0 +1,22 @@
+.admin-dashboard-bg {
+  background-image: url("../../../public/assets/adminDB.jpg"); /* Adjust path based on your project */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding-top: 70px; /* Adjust based on navbar height */
+  backdrop-filter: brightness(0.85);
+  background-color: none;
+  object-fit: contain;
+  
+}
+
+
+.admin-container {
+  background-color: transparent !important;
+}
+
+.custom-red-bold {
+  color: #9e0982; /* Bootstrap danger red */
+  font-weight: bold;
+  font-size: 5rem;
+}

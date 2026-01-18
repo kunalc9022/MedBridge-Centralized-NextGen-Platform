@@ -1,0 +1,133 @@
+/* Centering all elements and making the page responsive */
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+}
+
+.mission-text {
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.py-5 {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(185, 219, 219);
+}
+
+.team-card {
+  width: 100%;
+  max-width: 250px;
+  transition: box-shadow 0.4s ease;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-title,
+.mission-title,
+.team-title,
+.feedback-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-title span {
+  color: #007bff;
+}
+
+.mission-title,
+.team-title,
+.feedback-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #007bff;
+}
+
+.about-title:hover,
+.mission-title:hover,
+.team-title:hover,
+.feedback-title:hover {
+  transform: scale(1.1);
+}
+
+.feedback-section {
+  background-color: #f8f9fa;
+  padding: 2rem 0;
+  border-top: 1px solid #ddd;
+}
+
+.feedback-textarea {
+  width: 90%;
+  max-width: 600px;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  resize: none;
+}
+
+.feedback-textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.feedback-section button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.feedback-section button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-title,
+  .mission-title,
+  .team-title,
+  .feedback-title {
+    font-size: 1.8rem;
+  }
+
+  .mission-text {
+    font-size: 1rem;
+  }
+
+  .team-card {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .feedback-textarea {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-title {
+    font-size: 1.6rem;
+  }
+
+  .mission-title,
+  .team-title,
+  .feedback-title {
+    font-size: 1.5rem;
+  }
+}

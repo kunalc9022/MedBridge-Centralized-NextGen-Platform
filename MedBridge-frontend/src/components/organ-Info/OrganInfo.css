@@ -1,0 +1,74 @@
+/* .organinfo{
+  background-color: rgba(235, 235, 217, 0.954);
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  font-size: 1em;
+
+}
+.Ticket{
+  background-color: rgb(239, 240, 241);
+  height: 35vh;
+  width: 50vh;
+  font-size: 1em;
+  padding: 1rem;
+  padding-top: 8rem;
+  text-align: center;
+  border: 0.1rem solid rgb(247, 151, 34);
+  border-radius: 1em;
+}
+.Tickets {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ height: 25rem;
+}
+.Tickets div{
+  margin: 0.25em;
+}
+.heading{
+  margin-left: 15em;
+  margin-top: 1em;
+  font-size: 2em;
+}
+.para{
+   margin-left: 10em;
+  text-align: center;
+}
+.heartIcon{
+  height: 15vh;
+  width: 10vw;
+  position: relative;
+  z-index: 1;
+  top: 5rem;
+  left: 11rem;
+} */
+
+.organinfo {
+  background-color: #f9f9f9;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.para {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.Ticket h4 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.Ticket p {
+  font-size: 0.95rem;
+  color: #555;
+}
+.organ{
+  background-color: antiquewhite;
+}

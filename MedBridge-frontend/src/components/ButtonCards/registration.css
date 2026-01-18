@@ -1,0 +1,14 @@
+.hover-animate:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card .btn {
+  background-color: #ffab10 !important;
+  border: none !important;
+  font-size: 1rem !important;
+  padding: 0.5rem 1.2rem !important;
+  border-radius: 8px !important;
+  color: white !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

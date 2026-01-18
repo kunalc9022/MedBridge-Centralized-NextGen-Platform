@@ -1,0 +1,16 @@
+.patient-dashboard-container {
+  background-image: url('../../../public/assets/patient.png'); /* Put your image in public/images */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  backdrop-filter: brightness(0.95);
+}
+
+.patient-dashboard-heading {
+  color: #004080;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #ffffff;
+}
