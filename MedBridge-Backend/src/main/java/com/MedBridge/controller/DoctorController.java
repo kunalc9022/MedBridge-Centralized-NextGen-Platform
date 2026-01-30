@@ -110,8 +110,6 @@ public class DoctorController {
 		}
 	}
 
-
-
 	@PostMapping("/login")
 	@ApiOperation(value = "Api to login any Doctor")
 	public ResponseEntity<?> login(@RequestBody UserLoginRequest userLoginRequest) {

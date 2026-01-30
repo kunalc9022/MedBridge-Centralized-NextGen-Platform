@@ -18,7 +18,7 @@ public class SwaggerConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.dentalmanagement"))
+                .apis(RequestHandlerSelectors.basePackage("com.MedBridge"))
                 .paths(PathSelectors.any())
                 .build().apiInfo(metaData());
     }
@@ -26,7 +26,7 @@ public class SwaggerConfig {
     private ApiInfo metaData() {
         return new ApiInfoBuilder()
                 .title("Code With Murad - Spring Boot Swagger Configuration")
-                .description("\"Swagger configuration for Dental Management\"")
+                .description("\"Swagger configuration for Hospital Management\"")
                 .version("1.1.0")
                 .license("Apache 2.0")
                 .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0\"")
