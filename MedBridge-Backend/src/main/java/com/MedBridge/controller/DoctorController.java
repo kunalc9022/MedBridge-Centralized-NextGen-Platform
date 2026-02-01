@@ -200,6 +200,40 @@ public class DoctorController {
 		LOG.info("response sent!");
 	}
 
+    @PutMapping("/cancel-appointment/{appointmentId}")
+    @ApiOperation(value = "API to cancel appointment by doctor")
+    public ResponseEntity<?> cancelAppointment(@PathVariable int appointmentId) {
+
+        LOG.info("Request received to cancel appointment with id : {}", appointmentId);
+
+        CommanApiResponse response = new CommanApiResponse();
+
+        Appointment appointment = appointmentService.getAppointmentById(appointmentId);
+
+        if (appointment == null) {
+            response.setResponseCode(Constants.ResponseCode.FAILED.value());
+            response.setResponseMessage("Appointment not found");
+            return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
+        }
+
+        // Only pending appointments can be cancelled
+        if (!appointment.getStatus().equals(Constants.AppointmentStatus.TREATMENT_PENDING.value())) {
+            response.setResponseCode(Constants.ResponseCode.FAILED.value());
+            response.setResponseMessage("Appointment cannot be cancelled");
+            return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+        }
+
+        appointment.setStatus(Constants.AppointmentStatus.CANCELLED.value());
+        appointmentService.updateAppointment(appointment);
+
+        response.setResponseCode(Constants.ResponseCode.SUCCESS.value());
+        response.setResponseMessage("Appointment cancelled successfully");
+
+        LOG.info("Appointment cancelled successfully");
+
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
 	@GetMapping("/specialist/all")
 	public ResponseEntity<?> getAllSpecialist() {
 

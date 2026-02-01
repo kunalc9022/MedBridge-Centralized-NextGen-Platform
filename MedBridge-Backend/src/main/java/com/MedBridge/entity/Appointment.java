@@ -105,7 +105,15 @@ public class Appointment {
 		this.appointmentDate = appointmentDate;
 	}
 
-	public String getDate() {
+    public String getScheduledTime() {
+        return scheduledTime;
+    }
+
+    public void setScheduledTime(String scheduledTime) {
+        this.scheduledTime = scheduledTime;
+    }
+
+    public String getDate() {
 		return date;
 	}
 

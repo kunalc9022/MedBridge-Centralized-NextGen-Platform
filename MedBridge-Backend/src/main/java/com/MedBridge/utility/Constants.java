@@ -44,7 +44,8 @@ public class Constants {
 		TREATMENT_DONE("Treatment Done"),
 		TREATMENT_PENDING("Treatment pending"),
 		ASSIGNED("Appointment Shceduled"),
-		PAID("Amount Paid");
+		PAID("Amount Paid"),
+        CANCELLED("Appointment Cancelled");
 
 
 		private String status;

@@ -173,6 +173,7 @@ public ResponseEntity<ApiResponse> updateAppointmentDetails(
 			a.setDate(appointment.getDate());
 			a.setAppointmentDate(appointment.getAppointmentDate());
 			a.setId(appointment.getId());
+            a.setScheduledTime(appointment.getScheduledTime());
 
 			response.add(a);
 		}
@@ -232,6 +233,7 @@ public ResponseEntity<ApiResponse> updateAppointmentDetails(
 		a.setAppointmentDate(appointment.getAppointmentDate());
 		a.setBloodGroup(patient.getBloodGroup());
 		a.setId(appointment.getId());
+        a.setScheduledTime(appointment.getScheduledTime());
 
 		LOG.info("response sent!!!");
 		return ResponseEntity.ok(a);
@@ -362,8 +364,9 @@ public ResponseEntity<ApiResponse> updateAppointmentDetails(
 			a.setAppointmentDate(appointment.getAppointmentDate());
 			a.setBloodGroup(patient.getBloodGroup());
 			a.setId(appointment.getId());
+            a.setScheduledTime(appointment.getScheduledTime());
 
-			response.add(a);
+            response.add(a);
 
 		}
 

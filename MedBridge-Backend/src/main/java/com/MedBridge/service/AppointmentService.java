@@ -79,6 +79,25 @@ public class AppointmentService {
 		emailService.sendPrescriptionEmail(email,patient.getFirstName(),appointment.getPrescription(), appointment.getPrice());
 
 	}
+    public void updateAppointment(Appointment appointment) {
+
+        if (appointment == null || appointment.getId() == 0) {
+            throw new IllegalArgumentException("Invalid appointment data");
+        }
+
+        Appointment existingAppointment = appointmentDao.findById(appointment.getId())
+                .orElseThrow(() ->
+                        new ResourceNotFoundException("Appointment", "id", appointment.getId())
+                );
+
+        // Update allowed fields
+        existingAppointment.setStatus(appointment.getStatus());
+        existingAppointment.setPrescription(appointment.getPrescription());
+        existingAppointment.setPrice(appointment.getPrice());
+        existingAppointment.setScheduledTime(appointment.getScheduledTime());
+
+        appointmentDao.save(existingAppointment);
+    }
 
 	public void scheduleAppointment(int appointmentId, String scheduledTime) {
 		Appointment appointment = appointmentDao.findById(appointmentId)

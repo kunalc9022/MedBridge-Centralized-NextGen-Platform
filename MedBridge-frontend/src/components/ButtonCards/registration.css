@@ -12,3 +12,52 @@
   color: white !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.patient-register-card {
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid #e3f2fd;
+  background: linear-gradient(135deg, #fff5eb, #e6f7ff);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.patient-register-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+}
+
+.register-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2d3d;
+}
+
+.register-subtext {
+  font-size: 1rem;
+  color: #5f6c7b;
+  max-width: 500px;
+}
+
+.register-btn {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 22px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.register-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.register-icon {
+  font-size: 5rem;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+

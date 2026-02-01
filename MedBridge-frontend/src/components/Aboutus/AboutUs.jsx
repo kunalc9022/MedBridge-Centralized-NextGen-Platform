@@ -12,9 +12,9 @@ const teamMembers = [
     image: "",
   },
   {
-    name: "Maheshwar Bagal",
-    role: "CDAC KHARGHAR",
-    image: "./../../../public/assets/LoginPageImages/maheshvar.png",
+    name: "",
+    role: "",
+    image: "./../../../public/assets/LoginPageImages/mahshvar.png",
   },
   {
     name: "",

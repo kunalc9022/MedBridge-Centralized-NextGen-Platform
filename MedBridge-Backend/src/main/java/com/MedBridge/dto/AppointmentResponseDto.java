@@ -28,7 +28,9 @@ public class AppointmentResponseDto {
 
 	private String date;
 
-	private String bloodGroup;
+    private String scheduledTime;
+
+    private String bloodGroup;
 
 	public int getId() {
 		return id;
@@ -142,4 +144,11 @@ public class AppointmentResponseDto {
 		this.bloodGroup = bloodGroup;
 	}
 
+    public String getScheduledTime() {
+        return scheduledTime;
+    }
+
+    public void setScheduledTime(String scheduledTime) {
+        this.scheduledTime = scheduledTime;
+    }
 }
