@@ -11,8 +11,8 @@
 	<groupId>com.dentalmanagement</groupId>
 	<artifactId>dental-management-system</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>dental-management-system</name>
-	<description>Dental Management using Spring Boot (Rest Api)</description>
+	<name>hospital-management-system</name>
+	<description>Hospital Management using Spring Boot (Rest Api)</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>

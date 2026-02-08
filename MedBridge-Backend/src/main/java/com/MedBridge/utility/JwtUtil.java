@@ -28,6 +28,7 @@ public class JwtUtil {
         final Claims claims = extractAllClaims(token);
         return claimsResolver.apply(claims);
     }
+
     private Claims extractAllClaims(String token) {
         return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
     }
@@ -35,7 +36,6 @@ public class JwtUtil {
     private Boolean isTokenExpired(String token) {
         return extractExpiration(token).before(new Date());
     }
-
 
 
     public String generateToken(String username) {

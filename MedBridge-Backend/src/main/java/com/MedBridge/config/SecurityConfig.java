@@ -28,6 +28,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private JwtFilter jwtFilter;
 
+
+
 //    @Override
 //    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 //        auth.userDetailsService(userDetailsService);
@@ -58,7 +60,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/api/patient/register", "/api/patient/login",
                         "/api/admin/gender", "/api/patient/bloodgroup/all",
                         "/api/doctor/register", "/api/doctor/login","/api/admin/register",
-                        "/api/admin/login", "/api/doctor/specialist/all","/api/doctor/by-speciality/**").permitAll()
+                        "/api/admin/login", "/api/doctor/specialist/all","/api/doctor/by-speciality/**"
+                    , "/swagger-ui.html",
+                        "/v2/api-docs",
+                        "/swagger-resources/**",
+                        "/webjars/**"   // Akash Changes
+                    ).permitAll()
 
                 // Role-based protection
 
@@ -86,7 +93,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         // Add JWT filter
         http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
     }
-
-
-
 }
