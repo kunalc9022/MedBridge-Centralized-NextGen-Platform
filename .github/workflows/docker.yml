@@ -25,6 +25,7 @@ jobs:
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./MedBridge-Backend
+          file: ./MedBridge-Backend/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/medbridge-backend:latest
