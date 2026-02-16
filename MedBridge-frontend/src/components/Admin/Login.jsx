@@ -46,7 +46,7 @@ const Login = () => {
     console.log("Login payload:", loginRequest);
     try {
       const response = await axios.post(
-        `http://localhost:8080/api/${loginRequest.role}/login`,
+        `/api/${loginRequest.role}/login`,
         loginRequest,
         {
           headers: {

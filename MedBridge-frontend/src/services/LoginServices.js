@@ -2,7 +2,7 @@ import axios from "axios";
 
 export function registerAsDoctor(values) {
   console.log(values);
-  return axios.post("http://localhost:8080/api/doctors/signup", values, {
+  return axios.post("/api/doctors/signup", values, {
     headers: {
       "Content-Type": "application/json",
     },
@@ -10,7 +10,7 @@ export function registerAsDoctor(values) {
   });
 }
 export function loginAsDoctor(data) {
-  return axios.post("http://localhost:8080/api/auth/doctor/signin", data);
+  return axios.post("/api/auth/doctor/signin", data);
 }
 export function loginAsPatient(data) {
   return axios.post("http://localhost:6200/home/login", data);

@@ -25,7 +25,7 @@ const ViewAppointmentToAdmin = () => {
       const token = sessionStorage.getItem("token");
       try {
         const response = await axios.get(
-          "http://localhost:8080/api/appointment/all",
+          "/api/appointment/all",
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setAllAppointments(response.data);

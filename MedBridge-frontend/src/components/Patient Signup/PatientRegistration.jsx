@@ -47,14 +47,14 @@ const PatientRegistration = () => {
   const [specialists, setSpecialists] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/api/admin/gender").then((res) => {
+    axios.get("/api/admin/gender").then((res) => {
       setGenders(res.data.genders || []);
     });
     axios
-      .get("http://localhost:8080/api/patient/bloodgroup/all")
+      .get("/api/patient/bloodgroup/all")
       .then((res) => setBloodGroups(res.data || []));
     axios
-      .get("http://localhost:8080/api/doctor/specialist/all")
+      .get("/api/doctor/specialist/all")
       .then((res) => setSpecialists(res.data || []));
   }, []);
 
@@ -130,7 +130,7 @@ const PatientRegistration = () => {
     if (!validate()) return;
 
     try {
-      const res = await fetch("http://localhost:8080/api/patient/register", {
+      const res = await fetch("/api/patient/register", {
         method: "POST",
         headers: {
           Accept: "application/json",

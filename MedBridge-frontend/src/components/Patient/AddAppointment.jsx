@@ -39,7 +39,7 @@ const AddAppointment = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/doctor/specialist/all")
+      .get("/api/doctor/specialist/all")
       .then((res) => {
         if (Array.isArray(res.data)) setSpecialities(res.data);
       })
@@ -50,7 +50,7 @@ const AddAppointment = () => {
     if (appointment.speciality) {
       axios
         .get(
-          `http://localhost:8080/api/doctor/by-speciality/${appointment.speciality}`
+          `/api/doctor/by-speciality/${appointment.speciality}`
         )
         .then((res) => {
           if (Array.isArray(res.data)) setDoctors(res.data);
@@ -84,7 +84,7 @@ const AddAppointment = () => {
       setIsLoading(true);
 
       const orderRes = await fetch(
-        `http://localhost:8080/api/payment/createOrder?amount=${amount}`,
+        `/api/payment/createOrder?amount=${amount}`,
         {
           method: "POST",
           headers: {
@@ -105,7 +105,7 @@ const AddAppointment = () => {
         order_id: orderData.id,
         handler: async function (response) {
           const verifyRes = await fetch(
-            "http://localhost:8080/api/payment/verify",
+            "/api/payment/verify",
             {
               method: "POST",
               headers: {
@@ -121,7 +121,7 @@ const AddAppointment = () => {
           );
 
           if (verifyRes.ok) {
-            fetch("http://localhost:8080/api/appointment/patient/add", {
+            fetch("/api/appointment/patient/add", {
               method: "POST",
               headers: {
                 Accept: "application/json",

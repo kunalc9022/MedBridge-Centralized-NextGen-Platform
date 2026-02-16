@@ -24,7 +24,7 @@ const ViewPatientToAdmin = () => {
 
   const retrieveAllPatient = async () => {
     const token = sessionStorage.getItem("token");
-    const response = await axios.get("http://localhost:8080/api/patient/all", {
+    const response = await axios.get("/api/patient/all", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -41,7 +41,7 @@ const ViewPatientToAdmin = () => {
     );
     if (!confirmDelete) return;
 
-    fetch(`http://localhost:8080/api/admin/delete/id?userId=${patientId}`, {
+    fetch(`/api/admin/delete/id?userId=${patientId}`, {
       method: "GET",
       headers: {
         Accept: "application/json",

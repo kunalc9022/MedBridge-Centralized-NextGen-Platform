@@ -32,7 +32,7 @@ const ViewDoctorAppointment = () => {
       const token = sessionStorage.getItem("token");
 
       const res = await axios.get(
-        `http://localhost:8080/api/appointment/doctor/id?doctorId=${doctor.id}`,
+        `/api/appointment/doctor/id?doctorId=${doctor.id}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
@@ -61,7 +61,7 @@ const ViewDoctorAppointment = () => {
       const token = sessionStorage.getItem("token");
 
       await axios.put(
-        `http://localhost:8080/api/appointment/${selectedAppointment.id}/update`,
+        `/api/appointment/${selectedAppointment.id}/update`,
         { prescription },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -88,7 +88,7 @@ const ViewDoctorAppointment = () => {
       const token = sessionStorage.getItem("token");
 
       await axios.put(
-        `http://localhost:8080/api/appointment/${selectedAppointment.id}/schedule`,
+        `/api/appointment/${selectedAppointment.id}/schedule`,
         { scheduledTime: scheduleTime },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -111,7 +111,7 @@ const ViewDoctorAppointment = () => {
       const token = sessionStorage.getItem("token");
 
       await axios.put(
-        `http://localhost:8080/api/doctor/cancel-appointment/${id}`,
+        `/api/doctor/cancel-appointment/${id}`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );

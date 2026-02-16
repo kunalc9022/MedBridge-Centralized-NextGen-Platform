@@ -37,7 +37,7 @@ const ViewMyAppointment = () => {
 
   const retrieveAllAppointments = async () => {
     const response = await axios.get(
-      `http://localhost:8080/api/appointment/patient/id?patientId=${patient.id}`,
+      `/api/appointment/patient/id?patientId=${patient.id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -51,7 +51,7 @@ const ViewMyAppointment = () => {
     // 2. Then update appointment status
     try {
       const res = await fetch(
-        "http://localhost:8080/api/appointment/patient/update",
+        "/api/appointment/patient/update",
         {
           method: "POST",
           headers: {
@@ -234,7 +234,7 @@ export default ViewMyAppointment;
 
 //   const retrieveAllAppointments = async () => {
 //     const response = await axios.get(
-//       `http://localhost:8080/api/appointment/patient/id?patientId=${patient.id}`,
+//       `/api/appointment/patient/id?patientId=${patient.id}`,
 //       {
 //         headers: {
 //           Authorization: `Bearer ${token}`,
@@ -249,7 +249,7 @@ export default ViewMyAppointment;
 
 //     try {
 //       const res = await fetch(
-//         `http://localhost:8080/api/payment/refund?paymentId=${paymentId}&amount=200`,
+//         `/api/payment/refund?paymentId=${paymentId}&amount=200`,
 //         {
 //           method: "POST",
 //           headers: {
@@ -272,7 +272,7 @@ export default ViewMyAppointment;
 //   const cancelAppointment = (appointmentId) => {
 //     handleRefund(appointmentId);
 
-//     fetch("http://localhost:8080/api/appointment/patient/update", {
+//     fetch("/api/appointment/patient/update", {
 //       method: "POST",
 //       headers: {
 //         Accept: "application/json",

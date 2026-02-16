@@ -16,7 +16,7 @@ export default function AmbulanceBookingForm({ onBooked }) {
     setLoading(true);
     try {
       const res = await axios.post(
-        "http://localhost:8080/api/ambulance/book",
+        "/api/ambulance/book",
         form
       );
       onBooked(res.data);

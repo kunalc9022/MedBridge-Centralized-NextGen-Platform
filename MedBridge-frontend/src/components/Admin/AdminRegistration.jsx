@@ -36,15 +36,15 @@ const AdminRegistration = () => {
     else if (document.URL.includes("doctor")) user.role = "doctor";
 
     axios
-      .get("http://localhost:8080/api/admin/gender")
+      .get("/api/admin/gender")
       .then((res) => setGenders(res.data.genders));
 
     axios
-      .get("http://localhost:8080/api/patient/bloodgroup/all")
+      .get("/api/patient/bloodgroup/all")
       .then((res) => setBloodGroup(res.data));
 
     axios
-      .get("http://localhost:8080/api/doctor/specialist/all")
+      .get("/api/doctor/specialist/all")
       .then((res) => setSpecialists(res.data));
   }, []);
 
@@ -94,7 +94,7 @@ const AdminRegistration = () => {
       return;
     }
 
-    fetch("http://localhost:8080/api/admin/register", {
+    fetch("/api/admin/register", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -372,19 +372,19 @@ export default AdminRegistration;
 
 //   useEffect(() => {
 //     axios
-//       .get("http://localhost:8080/api/admin/gender")
+//       .get("/api/admin/gender")
 //       .then((res) => setGenders(res.data.genders));
 //     axios
-//       .get("http://localhost:8080/api/patient/bloodgroup/all")
+//       .get("/api/patient/bloodgroup/all")
 //       .then((res) => setBloodGroup(res.data));
 //     axios
-//       .get("http://localhost:8080/api/doctor/specialist/all")
+//       .get("/api/doctor/specialist/all")
 //       .then((res) => setSpecialists(res.data));
 //   }, []);
 
 //   const saveUser = (e) => {
 //     e.preventDefault();
-//     fetch("http://localhost:8080/api/admin/register", {
+//     fetch("/api/admin/register", {
 //       method: "POST",
 //       headers: {
 //         Accept: "application/json",

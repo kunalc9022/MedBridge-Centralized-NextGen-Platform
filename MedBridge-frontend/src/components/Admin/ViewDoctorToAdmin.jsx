@@ -30,7 +30,7 @@ const ViewDoctorToAdmin = () => {
 
   const retrieveAllDoctor = async () => {
     const token = sessionStorage.getItem("token");
-    const response = await axios.get("http://localhost:8080/api/doctor/all", {
+    const response = await axios.get("/api/doctor/all", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -41,7 +41,7 @@ const ViewDoctorToAdmin = () => {
   const token = sessionStorage.getItem("token");
 
   const deleteDoctor = (doctorId) => {
-    fetch(`http://localhost:8080/api/admin/delete/id?userId=${doctorId}`, {
+    fetch(`/api/admin/delete/id?userId=${doctorId}`, {
       method: "DELETE",
 
       headers: {
@@ -99,7 +99,7 @@ const ViewDoctorToAdmin = () => {
                   <tr key={index}>
                     <td>
                       <Image
-                        src={`http://localhost:8080/api/admin/${doctor.doctorImage}`}
+                        src={`/api/admin/${doctor.doctorImage}`}
                         roundedCircle
                         width={60}
                         height={60}

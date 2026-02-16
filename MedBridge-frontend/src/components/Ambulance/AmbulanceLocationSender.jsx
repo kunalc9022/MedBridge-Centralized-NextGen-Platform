@@ -5,7 +5,7 @@ import { Client } from "@stomp/stompjs";
 const AmbulanceLocationSender = ({ ambulanceId }) => {
   useEffect(() => {
     const client = new Client({
-      webSocketFactory: () => new SockJS("http://localhost:8080/ws"),
+      webSocketFactory: () => new SockJS("/ws"),
       reconnectDelay: 5000,
     });
 

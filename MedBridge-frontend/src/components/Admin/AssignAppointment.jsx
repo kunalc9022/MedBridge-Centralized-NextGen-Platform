@@ -18,7 +18,7 @@ const AssignAppointment = () => {
 
   const retrieveAppointment = async () => {
     const response = await axios.get(
-      `http://localhost:8080/api/appointment/id?appointmentId=${appointmentId}`,
+      `/api/appointment/id?appointmentId=${appointmentId}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -29,7 +29,7 @@ const AssignAppointment = () => {
   };
 
   const retrieveAllDoctor = async () => {
-    const response = await axios.get("http://localhost:8080/api/doctor/all", {
+    const response = await axios.get("/api/doctor/all", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -62,7 +62,7 @@ const AssignAppointment = () => {
     try {
       setLoading(true); // 🔵 Start loader
       await axios.post(
-        "http://localhost:8080/api/appointment/admin/assign/doctor",
+        "/api/appointment/admin/assign/doctor",
         {
           appointmentId: Number(appointmentId),
           doctorId: Number(doctorId),
@@ -212,7 +212,7 @@ export default AssignAppointment;
 
 //   const retrieveAppointment = async () => {
 //     const response = await axios.get(
-//       `http://localhost:8080/api/appointment/id?appointmentId=${appointmentId}`,
+//       `/api/appointment/id?appointmentId=${appointmentId}`,
 //       {
 //         headers: {
 //           Authorization: `Bearer ${token}`,
@@ -223,7 +223,7 @@ export default AssignAppointment;
 //   };
 
 //   const retrieveAllDoctor = async () => {
-//     const response = await axios.get("http://localhost:8080/api/doctor/all", {
+//     const response = await axios.get("/api/doctor/all", {
 //       headers: {
 //         Authorization: `Bearer ${token}`,
 //       },
@@ -256,11 +256,11 @@ export default AssignAppointment;
 
 //     try {
 //       // const result = await axios.post(
-//       //   "http://localhost:8080/api/appointment/admin/assign/doctor",
+//       //   "/api/appointment/admin/assign/doctor",
 //       //   formData
 //       // );
 //       await axios.post(
-//         "http://localhost:8080/api/appointment/admin/assign/doctor",
+//         "/api/appointment/admin/assign/doctor",
 //         {
 //           appointmentId: Number(appointmentId),
 //           doctorId: Number(doctorId),

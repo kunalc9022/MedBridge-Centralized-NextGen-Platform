@@ -40,13 +40,13 @@ const DoctorRegister = () => {
   };
 
   const retrieveAllGenders = async () => {
-    const response = await axios.get("http://localhost:8080/api/admin/gender");
+    const response = await axios.get("/api/admin/gender");
     return response.data;
   };
 
   const retrieveAllSpecialist = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/doctor/specialist/all"
+      "/api/doctor/specialist/all"
     );
     return response.data;
   };
@@ -171,7 +171,7 @@ const DoctorRegister = () => {
     formData.append("image", selectedImage);
 
     axios
-      .post("http://localhost:8080/api/doctor/register", formData, {
+      .post("/api/doctor/register", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
